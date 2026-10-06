@@ -1,4 +1,4 @@
-﻿import { Mail, GitFork, Globe, Globe2, ExternalLink } from "lucide-react";
+﻿import { Mail, Github, Globe, Globe2, ExternalLink } from "lucide-react";
 
 const links = [
   {
@@ -16,10 +16,10 @@ const links = [
     external: true,
   },
   {
-    href: "https://GitFork.com/Mazt08",
-    icon: GitFork,
-    label: "GitFork",
-    value: "GitFork.com/Mazt08",
+    href: "https://github.com/Mazt08/portfolio",
+    icon: Github,
+    label: "Github",
+    value: "github.com/Mazt08/portfolio",
     external: true,
   },
   {
