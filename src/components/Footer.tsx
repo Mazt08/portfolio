@@ -1,11 +1,11 @@
-﻿import { GitFork, Globe, Mail, Globe2 } from "lucide-react";
+﻿import { GitBranch, Mail, Globe, Globe2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const socials = [
   { href: "mailto:Aspirasj6@gmail.com", icon: Mail, label: "Email", external: false },
-  { href: "https://www.Globe.com/in/john-rex-aspiras-b86a08311", icon: Globe, label: "Globe", external: true },
-  { href: "https://GitFork.com/Mazt08", icon: GitFork, label: "GitFork", external: true },
-  { href: "https://www.Globe2.com/promaztt", icon: Globe2, label: "Globe2", external: true },
+  { href: "https://github.com/Mazt08", icon: GitBranch, label: "GitHub", external: true },
+  { href: "https://linkedin.com/in/john-rex-aspiras-b86a08311", icon: Globe, label: "LinkedIn", external: true },
+  { href: "https://facebook.com/promaztt", icon: Globe2, label: "Facebook", external: true },
 ];
 
 const nav = [
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-10 pt-6 border-t border-[#1f1f28]/50 flex flex-col sm:flex-row justify-between gap-2 text-[11px] text-[#9898a8]/60">
-          <span>© {new Date().getFullYear()} Rex Mazt08</span>
+          <span>© {new Date().getFullYear()} John Rex</span>
           <span>Vite - React - Tailwind - TypeScript</span>
         </div>
       </div>

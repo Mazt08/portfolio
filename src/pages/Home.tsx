@@ -13,12 +13,9 @@ export default function Home() {
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#c4f030]/[0.04] rounded-full blur-3xl" />
         </div>
         <div className="relative z-10 max-w-3xl">
-          <div className="animate-fade-up inline-flex items-center gap-2 border border-[#1f1f28] bg-[#111118] text-[#9898a8] text-xs font-['JetBrains_Mono'] px-3 py-1.5 rounded-full mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c4f030] animate-pulse" />
-            BSIT Student Â· UTC+08:00
-          </div>
+          
           <h1 className="animate-fade-up-1 font-['JetBrains_Mono'] text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter mb-5 leading-[0.9] bg-gradient-to-br from-[#f0f0f5] via-[#f0f0f5] to-[#c4f030] bg-clip-text text-transparent">
-            Rex Mazt08
+            John Rex Aspiras
           </h1>
           <p className="animate-fade-up-2 text-lg md:text-xl text-[#9898a8] leading-relaxed max-w-lg mx-auto">
             Prompt engineer + AI-assisted developer. Builds full-stack systems, automates what can be automated, ships things that work.

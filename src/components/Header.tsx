@@ -40,7 +40,7 @@ export default function Header() {
           to="/"
           className="font-['JetBrains_Mono'] text-base md:text-lg font-semibold text-[#f0f0f5] hover:text-[#c4f030] transition-colors tracking-tight"
         >
-          <span className="text-[#c4f030]">{">"}</span> Rex Mazt08
+          <span className="text-[#c4f030]">{">"}</span> John Rex
         </NavLink>
 
         {/* Desktop nav */}
