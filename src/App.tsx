@@ -7,6 +7,7 @@ import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Stack from "./pages/Stack";
+import Affiliations from "./pages/Affiliations";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,6 +32,7 @@ export default function App() {
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/stack" element={<Stack />} />
+              <Route path="/affiliations" element={<Affiliations />} />
             </Routes>
           </div>
         </div>
