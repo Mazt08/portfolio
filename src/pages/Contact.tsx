@@ -1,4 +1,4 @@
-﻿import { Mail, GitBranch, Globe, Globe2, ExternalLink } from "lucide-react";
+﻿import { Mail, GitFork, Globe, Globe2, ExternalLink } from "lucide-react";
 
 const links = [
   {
@@ -9,24 +9,24 @@ const links = [
     external: false,
   },
   {
-    href: "https://www.Globe.com/in/john-rex-aspiras-b86a08311",
+    href: "https://linkedin.com/in/john-rex-aspiras-b86a08311",
     icon: Globe,
-    label: "Globe",
-    value: "in/john-rex-aspiras-b86a08311",
+    label: "LinkedIn",
+    value: "john-rex-aspiras",
     external: true,
   },
   {
-    href: "https://github.com/Mazt08/portfolio",
-    icon: GitBranch,
+    href: "https://github.com/Mazt08",
+    icon: GitFork,
     label: "GitHub",
-    value: "github.com/Mazt08/portfolio",
+    value: "Mazt08",
     external: true,
   },
   {
-    href: "https://www.Globe2.com/promaztt",
+    href: "https://facebook.com/promaztt",
     icon: Globe2,
-    label: "Globe2",
-    value: "Globe2.com/promaztt",
+    label: "Facebook",
+    value: "promaztt",
     external: true,
   },
 ];
@@ -45,7 +45,7 @@ export default function Contact() {
           Open to collaboration, technical discussions, and interesting projects. No recruiters sending mass templates.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {links.map(({ href, icon: Icon, label, value, external }) => (
             <a
               key={label}

@@ -13,7 +13,11 @@ export default function Home() {
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#c4f030]/[0.04] rounded-full blur-3xl" />
         </div>
         <div className="relative z-10 max-w-3xl">
-          
+          <img
+            src="https://avatars.githubusercontent.com/u/148603205?v=4"
+            alt="Profile"
+            className="w-24 h-24 rounded-full object-cover border-2 border-[#1f1f28] mx-auto mb-6 hover:scale-105 transition-transform"
+          />
           <h1 className="animate-fade-up-1 font-['JetBrains_Mono'] text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter mb-5 leading-[0.9] bg-gradient-to-br from-[#f0f0f5] via-[#f0f0f5] to-[#c4f030] bg-clip-text text-transparent">
             John Rex Aspiras
           </h1>
