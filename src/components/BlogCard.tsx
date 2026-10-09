@@ -6,7 +6,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
       to={`/blog/${post.slug}`}
-      className="group flex flex-col bg-[#111118] border border-[#1f1f28] rounded-2xl p-6 hover:-translate-y-0.5 hover:border-[#c4f030]/60 hover:shadow-lg hover:shadow-[#c4f030]/5 transition-all duration-200"
+      className="group flex flex-col bg-[#111118]/80 glass-card rounded-3xl p-7 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c4f030]/10 transition-all duration-300"
     >
       <div className="flex items-center justify-between mb-3">
         <time className="text-[11px] font-['JetBrains_Mono'] text-[#9898a8]">

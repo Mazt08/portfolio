@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       {/* â”€â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-      <section className="relative min-h-[88vh] flex items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center justify-center text-center px-6 overflow-hidden bg-gradient-to-b from-[#0a0a0e] via-[#111118] to-[#0a0a0e]">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#c4f030]/[0.04] rounded-full blur-3xl" />
         </div>
@@ -16,7 +16,7 @@ export default function Home() {
           <img
             src="https://avatars.githubusercontent.com/u/148603205?v=4"
             alt="Profile"
-            className="w-24 h-24 rounded-full object-cover border-2 border-[#1f1f28] mx-auto mb-6 hover:scale-105 transition-transform"
+            className="w-28 h-28 rounded-full object-cover border-[3px] border-[#c4f030]/30 mx-auto mb-8 profile-glow hover:scale-110 transition-transform duration-300 cursor-pointer"
           />
           <h1 className="animate-fade-up-1 font-['JetBrains_Mono'] text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter mb-5 leading-[0.9] bg-gradient-to-br from-[#f0f0f5] via-[#f0f0f5] to-[#c4f030] bg-clip-text text-transparent">
             John Rex Aspiras
