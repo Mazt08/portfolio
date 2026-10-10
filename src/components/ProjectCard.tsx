@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col bg-[#111118] border border-[#1f1f28] rounded-2xl p-6 hover:-translate-y-1 hover:border-[#c4f030] hover:shadow-xl hover:shadow-[#c4f030]/5 transition-all duration-200"
+      className="group flex flex-col bg-[#111118]/80 glass-card rounded-3xl p-7 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#c4f030]/10 transition-all duration-300"
     >
       <div className="flex items-start justify-between mb-3">
         <h3 className="font-['JetBrains_Mono'] text-base font-semibold text-[#f0f0f5] group-hover:text-[#c4f030] transition-colors leading-tight">
