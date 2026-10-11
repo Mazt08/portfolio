@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
 import { Moon, Sun, Menu, X } from "lucide-react";
 
@@ -7,6 +7,8 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/projects", label: "Projects" },
   { to: "/blog", label: "Blog" },
+  { to: "/stack", label: "Stack" },
+  { to: "/affiliations", label: "Affiliations" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -22,9 +24,10 @@ export default function Header() {
   }, []);
 
   // Close mobile menu on route change
+  const { pathname } = useLocation();
   useEffect(() => {
     setMenuOpen(false);
-  }, []);
+  }, [pathname]);
 
   return (
     <header

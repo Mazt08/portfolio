@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import { Menu, X, ChevronRight } from "lucide-react";
 
 const nav = [
-  { label: "Shop", href: "/" },
-  { label: "Blog", href: "/blog" },
-  { label: "Resources", href: "/" },
+  { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
-  { label: "Experience", href: "/" },
+  { label: "Blog", href: "/blog" },
   { label: "Stack", href: "/stack" },
-  { label: "Certifications", href: "/" },
-  { label: "Affiliations", href: "/" },
+  { label: "Affiliations", href: "/affiliations" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Sidebar() {
@@ -27,49 +25,58 @@ export default function Sidebar() {
         <Menu size={18} />
       </button>
 
+      {/* Backdrop — closes the drawer when tapped outside it */}
+      {open && (
+        <button
+          aria-label="Close nav"
+          onClick={() => setOpen(false)}
+          className="fixed inset-0 z-30 bg-black/60 backdrop-blur-sm lg:hidden animate-fade-in"
+        />
+      )}
+
       {/* Collapsible drawer — fixed left, stays on zoom */}
       <aside
-        className={`fixed top-0 left-0 z-40 h-screen w-[7rem] bg-[#0a0a0e]/98 backdrop-blur-md border-r border-[#1f1f28]/60 lg:sticky lg:top-0 lg:z-auto lg:h-screen lg:shrink-0 lg:overflow-y-auto lg:bg-[#0a0a0e] lg:w-[7rem] transition-transform duration-300 ease-out
-        ${open ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
+        className={`fixed top-0 left-0 z-40 h-screen w-[14rem] sm:w-[16rem] bg-[#0a0a0e]/98 backdrop-blur-md border-r border-[#1f1f28]/60 lg:sticky lg:top-0 lg:z-auto lg:h-screen lg:shrink-0 lg:overflow-y-auto lg:bg-[#0a0a0e] lg:w-[16rem] transition-transform duration-300 ease-out
+        ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
       >
-        <div className="flex flex-col h-full px-2 py-8 lg:py-12 lg:px-2">
+        <div className="flex flex-col h-full px-4 py-8 lg:py-12 lg:px-5">
           {/* Close button (mobile only) */}
           <button
             onClick={() => setOpen(false)}
-            className="lg:hidden self-end mb-4 w-8 h-8 rounded-full bg-[#111118] border border-[#1f1f28] flex items-center justify-center text-[#f0f0f5] hover:text-[#c4f030] transition-colors"
+            className="lg:hidden self-end mb-6 w-9 h-9 rounded-full bg-[#111118] border border-[#1f1f28] flex items-center justify-center text-[#f0f0f5] hover:text-[#c4f030] transition-colors"
             aria-label="Close nav"
           >
             <X size={14} />
           </button>
 
           {/* Brand */}
-          <div className="mb-8">
+          <div className="mb-10">
             <Link
               to="/"
               onClick={() => setOpen(false)}
-              className="font-['JetBrains_Mono'] text-lg font-bold tracking-tight text-[#f0f0f5] hover:text-[#c4f030] transition-colors block leading-snug -ml-1"
+              className="font-['JetBrains_Mono'] text-xl font-extrabold tracking-tighter text-[#f0f0f5] hover:text-[#c4f030] transition-colors block leading-none text-left"
             >
               John Rex Aspiras
             </Link>
-            <p className="text-[11px] text-[#9898a8] mt-1 font-['JetBrains_Mono'] leading-snug -ml-1">
+            <p className="text-[11px] text-[#9898a8] mt-2 font-['JetBrains_Mono'] leading-snug tracking-tight">
               Prompt engineer + AI-assisted developer
             </p>
           </div>
 
-          {/* Nav — all text shifted left */}
-          <nav className="space-y-0.5 flex-1">
+          {/* Nav — left-aligned, fixed at left always */}
+          <nav className="space-y-1.5 flex-1">
             {nav.map((item) => (
               <Link
                 key={item.label}
                 to={item.href}
                 onClick={() => setOpen(false)}
-                className="group flex items-center gap-1 text-[13px] font-['JetBrains_Mono'] text-[#9898a8] hover:text-[#c4f030] py-1 pl-0 transition-colors tracking-tight leading-none"
+                className="group flex items-center gap-2.5 text-[14px] font-['JetBrains_Mono'] text-[#9898a8] hover:text-[#c4f030] py-1.5 px-2 -ml-2 rounded-lg hover:bg-[#111118]/60 transition-all tracking-tight leading-none text-left"
               >
                 <ChevronRight
-                  size={10}
-                  className="text-[#c4f030]/30 group-hover:text-[#c4f030] transition-colors shrink-0"
+                  size={12}
+                  className="text-[#c4f030]/40 group-hover:text-[#c4f030] transition-colors shrink-0"
                 />
-                {item.label}
+                <span className="font-medium">{item.label}</span>
               </Link>
             ))}
           </nav>

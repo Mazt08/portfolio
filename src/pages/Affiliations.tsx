@@ -1,25 +1,23 @@
 import { useState, useEffect } from "react";
-import { ExternalLink, Users, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ExternalLink, Users } from "lucide-react";
 
 const affiliations = [
   {
     name: "ABPH",
     role: "Member",
     desc: "A community where Filipino builders share what they're shipping and get real feedback — not theory.",
-    link: "#",
+    link: "https://github.com/Mazt08",
   },
   {
     name: "FWDP",
     role: "Member",
     desc: "Focused on practical engineering, web systems, and shipping with speed over perfection.",
-    link: "#",
+    link: "https://github.com/Mazt08",
   },
 ];
 
 export default function Affiliations() {
   const [count, setCount] = useState(1);
-  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -30,25 +28,7 @@ export default function Affiliations() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0a0a0e] via-[#0d0d14] to-[#0a0a0e] text-[#f0f0f5]">
-      {/* Mobile header */}
-      <header className="lg:hidden sticky top-0 z-40 bg-[#0a0a0e]/90 backdrop-blur-md border-b border-[#1f1f28]/60 px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="font-['JetBrains_Mono'] text-lg font-bold tracking-tight text-[#f0f0f5]">John Rex Aspiras</Link>
-        <button onClick={() => setMobileOpen(!mobileOpen)} className="w-9 h-9 rounded-full bg-[#111118] border border-[#1f1f28] flex items-center justify-center text-[#c4f030]" aria-label="Menu">
-          {mobileOpen ? <X size={16} /> : <Menu size={16} />}
-        </button>
-      </header>
-
-      {/* Mobile collapsible nav */}
-      <nav className={`lg:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-64 border-b border-[#1f1f28]/60" : "max-h-0"}`}>
-        <div className="px-4 py-3 space-y-1 bg-[#0a0a0e]/95">
-          {[{l:"Shop",h:"/"},{l:"Blog",h:"/blog"},{l:"Projects",h:"/projects"},{l:"Stack",h:"/stack"},{l:"Contact",h:"/contact"}].map(n=>(
-            <Link key={n.l} to={n.h} onClick={()=>setMobileOpen(false)} className="block text-sm font-['JetBrains_Mono'] text-[#9898a8] hover:text-[#c4f030] py-1">{n.l}</Link>
-          ))}
-        </div>
-      </nav>
-
       <div className="max-w-3xl mx-auto px-6 sm:px-8 py-16 sm:py-24 lg:py-28">
-        {/* Eye-catch header */}
         <div className="mb-14">
           <p className="text-xs font-['JetBrains_Mono'] tracking-[0.2em] text-[#c4f030]/70 uppercase mb-3">Communities</p>
           <h1 className="font-['JetBrains_Mono'] text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter leading-[0.85] mb-5">
@@ -57,7 +37,6 @@ export default function Affiliations() {
           <p className="text-[#9898a8] text-base sm:text-xl max-w-xl leading-relaxed">Associations and communities I'm part of — and how I show up in them.</p>
         </div>
 
-        {/* Cards — responsive grid */}
         <div className="grid grid-cols-1 gap-5">
           {affiliations.map((a) => (
             <a
@@ -83,7 +62,6 @@ export default function Affiliations() {
           ))}
         </div>
 
-        {/* Live viewer — pill float */}
         <div className="mt-14 flex items-center gap-3">
           <div className="inline-flex items-center gap-3 bg-[#111118]/80 border border-[#1f1f28]/60 rounded-2xl px-5 py-3 shadow-lg shadow-black/20 backdrop-blur-sm">
             <div className="flex items-center gap-2 text-[#c4f030]">

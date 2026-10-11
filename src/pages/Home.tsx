@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex items-center justify-center gap-3 mb-8">
           <a href="https://github.com/Mazt08" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-10 h-10 rounded-full bg-[#111118] border border-[#1f1f28] flex items-center justify-center text-[#f0f0f5] hover:text-[#c4f030] hover:border-[#c4f030]/40 transition-all"><GitFork size={18} /></a>
           <a href="https://linkedin.com/in/john-rex-aspiras-b86a08311" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-[#111118] border border-[#1f1f28] flex items-center justify-center text-[#f0f0f5] hover:text-[#c4f030] hover:border-[#c4f030]/40 transition-all"><Globe size={18} /></a>
-          <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-[#111118] border border-[#1f1f28] flex items-center justify-center text-[#f0f0f5] hover:text-[#c4f030] hover:border-[#c4f030]/40 transition-all"><Globe size={18} /></a>
+          <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-[#111118] border border-[#1f1f28] flex items-center justify-center text-[#f0f0f5] hover:text-[#c4f030] hover:border-[#c4f030]/40 transition-all"><Globe size={16} /></a>
           <a href="mailto:Aspirasj6@gmail.com" aria-label="Email" className="w-10 h-10 rounded-full bg-[#111118] border border-[#1f1f28] flex items-center justify-center text-[#f0f0f5] hover:text-[#c4f030] hover:border-[#c4f030]/40 transition-all"><ExternalLink size={16} /></a>
         </div>
         <div className="flex flex-wrap justify-center gap-2">
