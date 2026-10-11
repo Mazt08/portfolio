@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -22,9 +23,10 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen bg-[#0a0a0e] text-[#f0f0f5] font-['Inter',system-ui,sans-serif]">
-        <div className="flex flex-col lg:flex-row max-w-[1400px] mx-auto">
+        <div className="flex flex-col lg:flex-row max-w-[1400px] mx-auto lg:items-start">
           <Sidebar />
           <div className="flex-1 min-w-0">
+            <Header />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />

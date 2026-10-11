@@ -11,6 +11,8 @@ const socials = [
 const nav = [
   { to: "/projects", label: "Projects" },
   { to: "/blog", label: "Blog" },
+  { to: "/stack", label: "Stack" },
+  { to: "/affiliations", label: "Affiliations" },
   { to: "/contact", label: "Contact" },
 ];
 
