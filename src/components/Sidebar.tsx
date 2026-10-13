@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight, GitBranch } from "lucide-react";
 
 const nav = [
   { label: "Home", href: "/" },
@@ -9,6 +9,7 @@ const nav = [
   { label: "Stack", href: "/stack" },
   { label: "Affiliations", href: "/affiliations" },
   { label: "Contact", href: "/contact" },
+  { label: "GitHub", href: "https://github.com/Mazt08", external: true },
 ];
 
 export default function Sidebar() {
@@ -65,20 +66,42 @@ export default function Sidebar() {
 
           {/* Nav — left-aligned, fixed at left always */}
           <nav className="space-y-1.5 flex-1">
-            {nav.map((item) => (
-              <Link
-                key={item.label}
-                to={item.href}
-                onClick={() => setOpen(false)}
-                className="group flex items-center gap-2.5 text-[14px] font-['JetBrains_Mono'] text-[#9898a8] hover:text-[#c4f030] py-1.5 px-2 -ml-2 rounded-lg hover:bg-[#111118]/60 transition-all tracking-tight leading-none text-left"
-              >
-                <ChevronRight
-                  size={12}
-                  className="text-[#c4f030]/40 group-hover:text-[#c4f030] transition-colors shrink-0"
-                />
-                <span className="font-medium">{item.label}</span>
-              </Link>
-            ))}
+            {nav.map((item) => {
+              const className =
+                "group flex items-center gap-2.5 text-[14px] font-['JetBrains_Mono'] text-[#9898a8] hover:text-[#c4f030] py-1.5 px-2 -ml-2 rounded-lg hover:bg-[#111118]/60 transition-all tracking-tight leading-none text-left";
+              const content = (
+                <>
+                  <ChevronRight
+                    size={12}
+                    className="text-[#c4f030]/40 group-hover:text-[#c4f030] transition-colors shrink-0"
+                  />
+                  <span className="font-medium">{item.label}</span>
+                  {item.external && <GitBranch size={12} className="ml-auto opacity-60" />}
+                </>
+              );
+
+              return item.external ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className={className}
+                >
+                  {content}
+                </a>
+              ) : (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onClick={() => setOpen(false)}
+                  className={className}
+                >
+                  {content}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       </aside>
